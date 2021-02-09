@@ -8,13 +8,15 @@ with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="calver",
-    description="Setuptools extension for CalVer package versions",
+    name="calver-pinning",
+    description="Setuptools extension for CalVer package versions (fork)",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/di/calver",
     author="Dustin Ingram",
     author_email="di@python.org",
+    maintainer="Jamie Bliss",
+    maintainer_email="jamie@ivyleav.es",
     classifiers=[
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Build Tools",
@@ -31,4 +33,5 @@ setup(
         ],
     },
     use_calver=True,
+    # setup_requires=['calver-pinning'],
 )

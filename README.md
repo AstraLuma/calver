@@ -1,17 +1,19 @@
 # CalVer
 
-The `calver` package is a [setuptools](https://pypi.org/p/setuptools) extension
+The `calver-pinning` package is a [setuptools](https://pypi.org/p/setuptools) extension
 for automatically defining your Python package version as a calendar version.
+
+This is a fork of the original `calver`.
 
 ## Usage
 
-First, ensure `calver` is present during the project's build step by specifying
+First, ensure `calver-pinning` is present during the project's build step by specifying
 it as one of the build requirements:
 
 `pyproject.toml`:
 ```toml
 [build-system]
-requires = ["setuptools>=42", "wheel", "calver"]
+requires = ["setuptools>=42", "wheel", "calver-pinning"]
 ```
 
 To enable generating the version automatically based on the date, add the
@@ -24,7 +26,7 @@ from setuptools import setup
 setup(
     ...
     use_calver=True,
-    setup_requires=['calver'],
+    setup_requires=['calver-pinning'],
     ...
 )
 ```
@@ -76,7 +78,7 @@ def long_now_version():
 setup(
     ...
     use_calver=long_now_version,
-    setup_requires=['calver'],
+    setup_requires=['calver-pinning'],
     ...
 )
 ```
