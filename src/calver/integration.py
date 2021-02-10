@@ -1,11 +1,15 @@
 import datetime
 import os
+import sys
 
 from . import commands
 
 DEFAULT_FORMAT = "%Y.%m.%d"
 
 VERSION_FILE = ".calver-version"
+
+if sys.version_info < (3,):
+    FileNotFoundError = IOError
 
 
 def read_version_file(dist):
